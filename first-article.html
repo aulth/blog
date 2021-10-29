@@ -66,9 +66,12 @@
         }
     </script>
     <script>
-        document.getElementsByTagName('meta')["og:description"].content = document.getElementById('article-text').split('').slice(40).join('');
-        document.getElementsByTagName('meta')["og:url"].content = window.location.href;
-        document.getElementsByTagName('meta')["og:image"].content = document.getElementById('article-thumbnail').src;
+        document.querySelector('meta[name="og:description"]').setAttribute("content", `${document.getElementById('article-text').split('').slice(40).join('')}`);
+        document.querySelector('meta[name="og:url"]').setAttribute("content", `${window.location.href}`);
+        document.querySelector('meta[name="og:image"]').setAttribute("content", `${document.getElementById('article-thumbnail').src}`);
+        // document.getElementsByTagName('meta')["og:description"].content = document.getElementById('article-text').split('').slice(40).join('');
+        // document.getElementsByTagName('meta')["og:url"].content = window.location.href;
+        // document.getElementsByTagName('meta')["og:image"].content = document.getElementById('article-thumbnail').src;
 
     </script>
 </body>
