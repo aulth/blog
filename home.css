@@ -104,6 +104,11 @@ header>nav>ul li
     width: 100%;
     
 }
+.home-post-content a
+{
+    text-decoration: none;
+    color: black;
+}
 .home-post-content .author-avtar
 {
     padding: 20px 0px 20px 0px;
