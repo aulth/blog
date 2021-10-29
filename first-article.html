@@ -13,7 +13,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
 </head>
 <body>
     <section>
@@ -63,9 +62,14 @@
             window.location.href = `https://www.facebook.com/sharer.php?u=${window.location.href}`;
         }
         function wpShare(){
-            window.location.href = `whatsapp://send?text=*${document.getElementById('article-heading').textContent}*%20${window.location.href}`;
+            window.location.href = `whatsapp://send?text=*${document.getElementById('article-heading').textContent}*%0A${window.location.href}`;
         }
-    // https://www.facebook.com/sharer.php?u=[post-url]
+    </script>
+    <script>
+        document.getElementsByTagName('meta')["og:description"].content = document.getElementById('article-text').split('').slice(40).join('');
+        document.getElementsByTagName('meta')["og:url"].content = window.location.href;
+        document.getElementsByTagName('meta')["og:image"].content = document.getElementById('article-thumbnail').src;
+
     </script>
 </body>
 </html>
