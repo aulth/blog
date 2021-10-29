@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="article.css">
+    <meta name="theme-color" content="#acffdf">
+    <link href='http://aulth.github.io/blog' rel='icon' type='image/x-icon'/>
+    <meta name="author" content="Mohd Usman">
+    <meta property="og:title" id="article-share-title" content="Blog | Aulth" />
+    <meta property="og:description" content="A blog by Mohd Usman" />
+    <meta property="og:url" content="http://aulth.github.io/blog" />
+    <meta property="og:image" content="https://i.ibb.co/L8pxQx3/blog.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="article-title"></title>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="blog"><h3>Blog</h3></a>
+            <nav>
+                <ul>
+                    <li>Products</li>
+                    <li>Company</li>
+                    <li>Sign up</li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section>
+        <div class="home">
+            <div class="home-strip">
+                <ul>
+                    <li>Popular</li>
+                    <li>Engineering</li>
+                    <li>Programming</li>
+                </ul>
+            </div>
+            <div class="article-box">
+                <h2 id="article-heading">First Article Heading</h2> 
+                <div  class="post-author-avtar">
+                    <img src="avtar.jpg" id="post-avtar-image" alt=""><span id="post-author-name">Mohd Usman on 29/10/2021</span>
+                </div>
+                <div id="article-content">
+                    <img src="jmi.jpeg" id="article-thumbnail" alt="">
+                    <p id="article-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem est voluptas suscipit quod a? Repellat rerum ea nostrum error rem culpa, distinctio ipsa dolorum velit magnam, impedit, explicabo deleniti atque.</p>
+                </div>
+                <div class="share-button">
+                    <ul>
+                        <li onclick="fbShare()">Facebook</li>
+                        <li onclick="wpShare()">Whatsapp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+  Copyright <a href="https://aulth.github.io/usman">Mohd Usman</a> | All rights reserved 
+</footer>
+    <script>
+        function fbShare(){
+            window.location.href = `https://www.facebook.com/sharer.php?u=${window.location.href}`;
+        }
+        function wpShare(){
+            window.location.href = `whatsapp://send?text=*${document.getElementById('article-heading').textContent}*%0A${window.location.href}`;
+        }
+    </script>
+    <script>
+        document.getElementById('article-share-title').content = document.getElementById('article-heading').textContent;
+        document.getElementById('article-title').textContent = document.getElementById('article-heading').textContent;
+        // document.querySelector('meta[name="description"]').setAttribute("content", `${document.getElementById('article-text').split('').slice(40).join('')}`);
+        // document.querySelector('meta[name="url"]').setAttribute("content", `${window.location.href}`);
+        // document.querySelector('meta[name="image"]').setAttribute("content", `${document.getElementById('article-thumbnail').src}`);
+
+    </script>
+</body>
+</html>

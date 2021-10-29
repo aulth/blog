@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="article.css">
+    <meta name="theme-color" content="#acffdf">
+    <link href='http://aulth.github.io/blog' rel='icon' type='image/x-icon'/>
+    <meta name="author" content="Mohd Usman">
+    <meta property="og:title" id="article-share-title" content="Blog | Aulth" />
+    <meta property="og:description" content="A blog by Mohd Usman" />
+    <meta property="og:url" content="http://aulth.github.io/blog" />
+    <meta property="og:image" content="https://i.ibb.co/L8pxQx3/blog.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="article-title"></title>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="blog"><h3>Blog</h3></a>
+            <nav>
+                <ul>
+                    <li>Products</li>
+                    <li>Company</li>
+                    <li>Sign up</li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section>
+        <div class="home">
+            <div class="home-strip">
+                <ul>
+                    <li>Popular</li>
+                    <li>Engineering</li>
+                    <li>Programming</li>
+                </ul>
+            </div>
+            <div class="article-box">
+                <h2 id="article-heading">Jamia Millia Islamia completes 101 years, pledges to achieve new heights</h2> 
+                <div  class="post-author-avtar">
+                    <img src="avtar.jpg" id="post-avtar-image" alt=""><span id="post-author-name">Mohd Usman on 29/10/2021</span>
+                </div>
+                <div id="article-content">
+                    <img src="jmi.jpeg" id="article-thumbnail" alt="">
+                    <p id="article-text">llia Islamia has completed 100 years, the Centenary Foundation Day was celebrated. Congratulating JMI for the Centenary Foundation Day,
+                         Chief Guest Hamid Ahmed said that the two institutions can collaborate in setting up medical and Unani
+                          colleges and hospitals. He also offered to help Jamia schools and setting up of Hakeem Abdul 
+                           Chair at JMI through Hamdard National Foundation. Late Shafiq ur Rehman Qidwai’s son Janab Sadiq ur
+                            Rehman Kidwai was the Guest of Honour of the books launch and inaugural function which was attended by 
+                            Registrar Dr Nazim Husain Al Jafri, Deans, teachers and other staff members of the university.
+                            <br> <br>
+                            The programme was jointly organised by Dr. Zakir Library and Premchand Archives and Literary Centre of the university.  
+                            Literature on and by founding fathers, rare photographs and other archival material are on display  
+                            in the exhibition highlighting the role of all JMI patrons till now. During her address, Akhtar
+                             congratulated all the authors for bringing out intellectual works inspite of the challenges faced 
+                             during the pandemic. It speaks volumes of their keen interest, sincere efforts and dedication to 
+                             continue their intellectual endeavours in spite of all odds. University Librarian Dr Tariq Ashraf 
+                             in his welcome address emphasised that JMI has continuously excelled during the last 3 years and 
+                             achieved success after success despite facing difficult situations. 
+                             <br> <br>
+                             It as emerged as one of the 
+                             top ranking global university and brand equity of the university has phenomenally increased, he said,
+                              adding that the library is trying its best to reach out to every user and provide best possible resources 
+                              and services. Dr. Sabiha Zaidi, Director, Premchand Archives and Literary Centre convened the book release
+                               programme. She highlighted the important role Premchand Archive is doing in preserving precious things 
+                               related to Jamia and invited authors of these publications to deliberate on the importance of their works.
+                                Dr Shahid Mahdi  shared his views on the works of authors and stressed that these books are valuable 
+                                contribution of the authors. The session ended with a vote of thanks presented by Dr. Nazim Husain 
+                                Al-Jafri, Registrar, JMI.</p>
+                </div>
+                <div class="share-button">
+                    <ul>
+                        <li onclick="fbShare()">Facebook</li>
+                        <li onclick="wpShare()">Whatsapp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+  Copyright <a href="https://aulth.github.io/usman">Mohd Usman</a> | All rights reserved 
+</footer>
+    <script>
+        function fbShare(){
+            window.location.href = `https://www.facebook.com/sharer.php?u=${window.location.href}`;
+        }
+        function wpShare(){
+            window.location.href = `whatsapp://send?text=*${document.getElementById('article-heading').textContent}*%0A${window.location.href}`;
+        }
+    </script>
+    <script>
+        document.getElementById('article-share-title').content = document.getElementById('article-heading').textContent;
+        document.getElementById('article-title').textContent = document.getElementById('article-heading').textContent;
+        // document.querySelector('meta[name="description"]').setAttribute("content", `${document.getElementById('article-text').split('').slice(40).join('')}`);
+        // document.querySelector('meta[name="url"]').setAttribute("content", `${window.location.href}`);
+        // document.querySelector('meta[name="image"]').setAttribute("content", `${document.getElementById('article-thumbnail').src}`);
+
+    </script>
+</body>
+</html>
